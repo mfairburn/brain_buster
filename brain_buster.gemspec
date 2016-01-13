@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "brain_buster"
-  s.version = "0.8.3"
+  s.version = "0.8.4"
   s.date = "2009-09-28"
   s.summary = "A Logic Captcha For Rails"
   s.email = ""

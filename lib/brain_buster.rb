@@ -28,7 +28,11 @@ class BrainBuster < ActiveRecord::Base
   private
   
   def self.find_random
-    find(:first, :order => random_function) 
+    if Rails::VERSION::MAJOR >= 4
+      order(random_function).first
+    else
+      find(:first, :order => random_function) 
+    end
   end
   
   def self.find_specific_or_fallback(id)
